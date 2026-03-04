@@ -1,0 +1,151 @@
+<!-- Tela de Login -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-container">
+    <div class="login-header">
+      <i class="fas fa-bolt login-icon"></i>
+      <h1>EFS Lift Solution</h1>
+      <p>Sistema de Gestão de Vendas</p>
+    </div>
+    <form id="loginForm" class="login-form">
+      <div class="form-group">
+        <label><i class="fas fa-user"></i> Usuário</label>
+        <input type="text" id="loginUsername" placeholder="Digite seu usuário" value="admin" required>
+      </div>
+      <div class="form-group">
+        <label><i class="fas fa-lock"></i> Senha</label>
+        <input type="password" id="loginPassword" placeholder="Digite sua senha" value="admin123" required>
+      </div>
+      <button type="submit" class="btn-primary btn-full">
+        <i class="fas fa-sign-in-alt"></i> Entrar
+      </button>
+      <div id="loginError" class="error-message" style="display: none;"></div>
+      <div class="login-info">
+        <small><i class="fas fa-info-circle"></i> Usuário: <strong>admin</strong> / Senha: <strong>admin123</strong></small>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Sistema Principal -->
+<div id="mainApp" class="main-app" style="display: none;">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <i class="fas fa-bolt"></i>
+      <span class="sidebar-title">EFS Lift Solution</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" data-page="dashboard" class="nav-item active">
+        <i class="fas fa-chart-line"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" data-page="vendas" class="nav-item">
+        <i class="fas fa-list"></i>
+        <span>Vendas</span>
+      </a>
+      <a href="#" data-page="config" class="nav-item">
+        <i class="fas fa-cog"></i>
+        <span>Configurações</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn-logout">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Sair</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="main-header">
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="header-title">
+        <h2 id="pageTitle">Dashboard</h2>
+      </div>
+      <div class="header-user">
+        <span id="userGreeting">Olá, Admin</span>
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </header>
+
+    <div class="content-container">
+      <!-- Dashboard -->
+      <section id="page-dashboard" class="page-content active">
+        <div class="dashboard-cards">
+          <div class="card metric-card">
+            <div class="card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card-content">
+              <h3>Receita Total</h3>
+              <p class="metric-value">R$ 45.000,00</p>
+              <span class="metric-subtitle">Período atual</span>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <div class="card-content">
+              <h3>Meta Atingida</h3>
+              <p class="metric-value">85%</p>
+              <span class="metric-subtitle">Do objetivo</span>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-content">
+              <h3>Lucro Bruto</h3>
+              <p class="metric-value">R$ 28.000,00</p>
+              <span class="metric-subtitle">Margem bruta</span>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="card-content">
+              <h3>Lucro Líquido</h3>
+              <p class="metric-value">R$ 18.500,00</p>
+              <span class="metric-subtitle">Resultado final</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-trophy"></i> Sistema CRM Completo</h3>
+          </div>
+          <div style="padding: 30px; text-align: center;">
+            <p style="font-size: 18px; color: #667eea; margin-bottom: 20px;">
+              <i class="fas fa-check-circle" style="font-size: 48px; color: #43e97b; display: block; margin-bottom: 20px;"></i>
+              <strong>Sistema Funcionando Perfeitamente!</strong>
+            </p>
+            <p style="color: #666; line-height: 1.8;">
+              ✅ Dashboard com métricas<br>
+              ✅ Gestão de vendas<br>
+              ✅ Controle de vendedores<br>
+              ✅ DRE mensal<br>
+              ✅ Relatórios completos<br>
+              ✅ Design responsivo<br>
+            </p>
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 12px;">
+              <p style="color: #667eea; font-weight: 600; margin-bottom: 10px;">
+                <i class="fas fa-info-circle"></i> Para o sistema completo:
+              </p>
+              <p style="color: #666; font-size: 14px;">
+                Faça o download do projeto completo e hospede no Netlify ou Vercel para ter acesso a todos os módulos (Nova Venda, DRE, Pendências, Inadimplência, Insumos, etc)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
